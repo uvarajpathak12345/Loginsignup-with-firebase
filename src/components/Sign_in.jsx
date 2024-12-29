@@ -20,10 +20,12 @@ const Form = () => {
       setLoading(true);
       let response = await googlelogin();
       setUser({ ...user, pagechange: false });
+
       console.log(response)
 
     } catch (err) {
       console.log(err)
+      
     }finally{
       setLoading(false);
     }
@@ -90,6 +92,7 @@ const Form = () => {
               type="email"
               className="input"
               placeholder="Enter your Email"
+              autoComplete="off"
             />
           </div>
 
@@ -104,6 +107,7 @@ const Form = () => {
               type="password"
               className="input"
               placeholder="Enter your Password"
+              autoComplete="off"
             />
           </div>
 
